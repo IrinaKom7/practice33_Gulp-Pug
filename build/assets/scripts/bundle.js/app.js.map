@@ -1,0 +1,1 @@
+{"version":3,"file":"../app.js","names":["slider","require"],"sources":["app.js"],"sourcesContent":["const slider = require('./common/slider');\r\n\r\nslider(); // инициализируем слайдер"],"mappings":"AAAA,MAAMA,OAASC,QAAQ,mBAEvBD"}

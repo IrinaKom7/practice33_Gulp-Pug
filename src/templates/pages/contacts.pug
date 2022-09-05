@@ -1,0 +1,24 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты'
+
+block content
+    h2 Контактная информация
+
+        h3 <em>Тут можно оставить свои контакты</em>
+        form
+            label(for="email") e-mail*
+            input(name="email" id="email")
+
+            label(for="form_name") Имя
+            input(name="form_name" id="form_name")
+
+            label(for="text") Сообщение
+            input(name="text" id="text")
+
+            button Отправить
+
+
+
+

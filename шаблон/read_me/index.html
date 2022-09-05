@@ -1,0 +1,482 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		body {font-size:80%;color:#222;background-image: url(assets/images/bg1.jpg); 
+
+background-repeat:repeat;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;padding-top:30px;}
+hr {background: url(assets/images/menuline.png) bottom repeat-x;
+clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr.space {background:#fff;color:#fff;}
+	</style>
+</head>
+<body>
+<div class="container">
+<h3 class="center alt">&ldquo;Resume/Portfolio&rdquo; Documentation by &ldquo;josweb&rdquo; v1.0</h3>
+<hr>
+<h1 class="center">&ldquo;Signature&rdquo;<br>
+(shared on themelock.com)</h1>
+		
+<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 5/7/2011<br>
+					By: Jo Phillips<br>
+					Website: <a href="http://spiralpixel.com">spiralpixel.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/josweb">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript &amp; Php</a></li>
+			
+			<li><a href="#credits">Sources and Credits</a></li>
+			
+			
+			
+			
+			
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+	
+		<p><b>Header</b><br/>
+		1: I have included my logo.psd in folder > psds. The font I have used is called Dancing Script and you can download it from here: http://www.impallari.com/dancing/<br/>
+		2: The social network icons can be found in images > social.</p>
+		<p><b>Introduction Page</b><br/>
+		1: The menu is controlled by the h1 tags. Simply add your page title and repeat in the menu links.<br/>
+		2: To add your pictures to the Nivo Slider, change your images in the code commented   - SLIDER GALLERY - ADD YOUR PHOTOS HERE . The slider images are 620px x 232px. <br/>The images for the slider can be found in the images folder. You can change the styling for this in the css folder - nivostyle.css.<br/>
+		3: You can change the rbbon on the slider, I have provided some options for you in the extras folder. There's also a psd of it. <br/>
+		4: To change it, choose your ribbon and add it to nivostyle.css. If you don't want it, simply delete the ribbon div class.</p>
+		
+		<p><b>Resume Section</b><br/>
+		1: You can add pages in the ul list named - innertab.  It has been commented for you  - (Resume Tab Links).<br/>
+		
+2: Biography page picture scroller. - The image sizes are 200px x 200px. This scroller uses MobilyNotes jquery (link in credits).<br/>
+3: The star jpgs can be found in the images folder, I have added five jpgs to cover all ratings.
+		</p><p><b>Services</b><br/>
+		The services page uses an accordian slider.<br/>1: Add your service title into the h2 tags<br/>2: Your service description starts in the div class: block, the title in the h3 tag.</p>
+		
+
+		<p><b>Sortable Gallery</b><br/>
+		 Thumbnails. The thumbnails are 145 x 92px in size and are stored in folder, images > art. They open using PrettyPhoto. More information on this can be found in the php section below.<br/>
+		1: The sortable galley is controlled using a list - (gallerynav).  Add your categories into the data-value and name them. If you follow my code, you won't get lost!<br/>
+		2: Each pic has its own data id, starting from 1, continue until you have added all of your pictures, each should have it's own value.  To get the images to sort, mix up your classes.  You can see how to do this by following my code.</p>
+		
+		<p><b>Featured Work</b><br/>
+		This section uses the same tabs as described in the resume section, add your links to the - inner-tab.<br/>
+		<b>Slider Thumb Gallery</b><br/>
+		1: The image sizes are: 620px x 232px. The thumbnails are 60px x 60px.<br/>
+		2: This gallery has an overlay effect where you can link to a web site. - Project. If you don't want to link to anything, remove the link on each picture.</p>
+		
+		
+		<p><b>Thumbnail Gallery</b><br/>
+		
+		a) Thumbnails. The thumbnails are 145px x 92px in size, are are stored in folder, images  > art. They open using PrettyPhoto. More information on this can be found in the php section below.<br/>
+		</p>
+		
+		
+		
+		<p><b>Contact Page</b>
+	<br/><b>Contact Form:</b><br/>
+		2: To get the contact form to forward to your email address.<br/>
+		a) In a text editor of your choice, open the folder called contact > submitmail.php <br/>
+	At the top of the page, you will see the following code:<br/><br/>
+		************************
+* Variables you can change
+*************************/<br/>
+
+$mailto = "ADDYOUREMAILADDESS";<br/>
+$cc = "";<br/>
+$bcc = "";<br/>
+$subject = "Email Form";<br/>
+$vname = " your site enquiry";
+<br/>b) Simply add your email address within the quote marks where it says YOUREMAILADDRESS<br/>	You can also add your form's subject and name.
+
+<br/><br/>
+<b>Twitter Tweets:</b><br/>
+Add your username in both the html code and the jQuery code.<br/>
+
+		1: JQuery - Scroll down until you see;<br/>
+		-- TWITTER - ADD YOUR USERNAME IN ID INSTEAD OF MINE --
+<br/>Simply replace 'jo_phillips' with your twitter id.<br/>
+
+2:  Also, don't forget to replace my username and link with yours in the html.
+
+<br/><br/>
+<b>Download Resume:</b><br/>
+I have included a designed resume for you - resume.html<br/>
+
+		1: Add your details then you can convert it to a pdf, ready for download.<br/>
+		An easy way of doing this is to view it in a browser, then click print on your top navigation bar. You will then have an option to save it as a pdf. I'm sure there's lots of other ways too but this is one easy option. 
+
+
+		</p>
+
+		<p>
+		<b>Google Maps:</b><br/>
+1: I have used the plugin called jQuery GPS<br/>
+In order to use the Google Maps API you must have an API key which you can get here:
+http://code.google.com/intl/en/apis/maps/signup.html
+<br/>
+2. To add your address, scroll down to the bottom of .index.html, only add the key code from the api you have created after where the code says key.<br/>
+3. To add your address to the map, find the comment, GOOGLE MAP. Add your address where it says, England. Done!
+You can find more documentation about this plugin here:
+http://www.birdwingfx.com/jQuery_gps/docu.html
+<br/>
+<hr>
+<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using one CSS file for this theme.  - style.css. </p> 
+
+<pre>/* 3: General Styling */
+
+body { font:  normal 12px 'Helvetica Neue', helvetica, arial, sans-serif; 
+background:#fcfcfc url(style/images/bg/light_grunge.jpg) repeat;  
+color: #889397; overflow-y: scroll; overflow-x: hidden; 
+}
+
+/* links ++++++++++++++++++++++++++++++++++++++++++++ */
+a { outline: none; text-decoration: none; color: #5f6d72; }
+a:hover  { outline: none; text-decoration: none; color: #555;  }
+a img { border: none; }
+
+/* button links ++++++++++++++++++++++++++++++++++++++++++++ */
+button { background: #e3e3e3; border: 1px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+  box-shadow: inset 0 0 1px 1px #f6f6f6;
+  color: #333; font:bold 11px "Helvetica Neue", helvetica, arial, sans-serif;
+  text-decoration:none; line-height: 1; padding: 5px 0 6px; text-align: center;
+  text-shadow: 0 1px 0 #fff; width: 70px;
+}
+
+button:hover { background: #d9d9d9;
+  -moz-box-shadow: inset 0 0 1px 1px #eaeaea;
+  -webkit-box-shadow: inset 0 0 1px 1px #eaeaea;
+  box-shadow: inset 0 0 1px 1px #eaeaea;
+  color: #222; cursor: pointer;
+}
+
+/* bulleted list ++++++++++++++++++++++++++++++++++++++++++++ */
+ul.bullet { padding: 0 0 20px 0; display: block; overflow: hidden; }
+ul.bullet li { line-height: 22px; list-style: none; display: block; 
+background: transparent url(style/images/bullet.jpg) no-repeat left 10px; 
+padding-left: 15px; }
+/* check list ++++++++++++++++++++++++++++++++++++++++++++ */
+ul.check_list { padding: 0 0 20px 0; display: block; overflow: hidden; }
+ul.check_list li { line-height: 22px; list-style: none; display: block; 
+background: transparent url(style/images/check.png) no-repeat  0px 2px; 
+padding-left: 25px; }
+
+/* quote styling ++++++++++++++++++++++++++++++++++++++++++++ */
+blockquote {float: left; font-family: Georgia, Times, serif; width: 600px; 
+/* required */ margin: 0 auto; font-size: 13px; 
+}
+#quote_wrap { background: transparent url(style/images/quote.png) no-repeat 0 8px; 
+font-size: 1.2em; font-style: italic; 
+line-height: 1.4em; margin: 20px 0 20px 0; padding: 0 0 0 45px; 
+}</pre>
+1: body:  You can change the background texture here. I have provided  six different background, you can find them in folder, images > bg.	<br/>
+2: button links: The main coloured button is in the images folder, the rest are in extras.<br/>
+3: There are two types of lists: bullets and check.<br/>
+4: quote styling: styling for your rotating quotes shown on the 'page with images'.<br/><br/>
+
+<pre>/* 4: Typography */ 
+
+
+h1  { font: normal 24px "CardoRegular", serif; background: transparent url(style/images/line.png) repeat-x 0px 30px; 
+display: block; color: #555; padding: 8px 0px 32px 0px; margin-bottom: 30px; height: 1px; text-shadow:1px 1px 0px #fcfcfc; 
+letter-spacing: 1px; }
+h2 { font: normal 17px "CardoRegular", serif; margin-bottom: 10px; color: #869397; }
+h3 { font: normal 15px "CardoRegular", serif; margin-bottom: 10px; margin-top: 2px; color: #869397; }
+h4 { font-size: 12px; font-weight:normal; color: #869397; margin-bottom:10px; }
+
+/* 5: Dividers */ 
+
+.divider, .divider2, .divider3 { 
+background: transparent url(style/images/diagonal_line.png) repeat-x bottom left; 
+height: 4px; display: block; }
+.divider { margin: 25px 0px 25px 0px; }
+.divider2 { margin: 25px 0px 40px 0px; }
+.divider3 { margin: 40px 0px 45px 0px; }</pre>
+1: The h1 tag is the page title, h2 for all other smaller headings.<br/>
+2: The divider image is the diagonal hatch that breaks up your sections.<br/><br/>
+
+<pre>/* 6: Image Styles */
+
+img.left, img.featured-left , img.right, img.featured-right , img.featured-single { 
+float: left; background: #fafafa; padding: 4px; border: 1px solid #ccc;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);}
+
+img.left{ float:left; margin: 6px 15px 0px 0px; }
+img.featured-left { float:left; margin: 2px 15px 0px 0px; }
+img.right{ float: right; margin: 6px 0px 0px 15px; } 
+img.featured-right { float: right; margin: 2px 0px 0px 15px; } 
+img.featured-single { float:left; margin: 0px 0px; }
+
+.job { background: url(style/images/full-time.png) no-repeat 2px -1px; padding: 0px 5px 0px 27px; } 
+.job h2 , .pen h2{ margin-bottom: 5px; }
+.pen { background: url(style/images/pen.png) no-repeat 2px 0px; padding: 0px 5px 0px 27px; }
+</pre>
+1: I have used box shadow effects on the images, this is the styling for all of your images.<br/>
+2: job - the styling for the briefcase - pen the pencil in the resume.<br/>
+
+
+<pre>
+/* 1: Header */ 
+
+/* top strip  ++++++++++++++++++++++++++++++++++++++++++++ */
+#strip { background: transparent url(style/images/strip/check_strip.png) repeat-x 0px -15px; 
+height: 83px; }
+
+/* container ++++++++++++++++++++++++++++++++++++++++++++ */
+#container { min-height: 100%; height: auto !important; height: 100%; padding: 0px 0px; 
+margin: -70px auto -57px; }
+
+
+/* header ++++++++++++++++++++++++++++++++++++++++++++ */
+#header {width: 960px; height: 45px; margin: 0px auto 80px auto; }
+
+/* social links ++++++++++++++++++++++++++++++++++++++++++++ */
+ul.social {margin: 20px 10px 0px 0px; float: right; }
+ul.social li  { float: right; padding: 0px 8px 0px 0px; }
+ul.social a  { border:none;}
+/* logo ++++++++++++++++++++++++++++++++++++++++++++ */
+img.logo { margin-top: -15px; margin-left: -20px; float: left; }
+
+
+/* 2: Menu */
+
+ul#tab-menu { float:left; width: 210px; background-color: transparent; font: normal 15px "CardoRegular", serif; 
+margin: 0px 10px 0 0; padding: 38px 60px 0px 0px; list-style: none; 
+}
+ul#tab-menu li { border-top:1px dotted #bbb; cursor: pointer; padding: 10px 15px; margin: 0; color: #6B777C;
+}
+ul#tab-menu li:hover{ color: #54BBDD; }
+ul#tab-menu li.selected { color:  #6B777C; background: url(style/images/red_ribbon.png) no-repeat 182px -3px;
+}
+
+/* 3: Content */
+
+/* content wrapper ++++++++++++++++++++++++++++++++++++++++++++ */
+#wrapper { width: 960px; margin: 0 auto; padding: 0px 0px; line-height: 20px; }
+
+/* content ++++++++++++++++++++++++++++++++++++++++++++ */
+.tab-content { line-height: 22px;padding-bottom:80px;
+background:transparent; width: 660px; float: left; }
+.tab-content div.tab { display: none; padding: 0; }
+.tab-content div.tab.show { display: block; }
+.tab-content div.tab p { width: 660px; overflow: hidden; padding: 0; margin: 0 0 15px 0;  }
+.tab-content div.tab div p { width: 100%; }
+
+
+/* 4: Columns */
+
+/* 2 columns per page ++++++++++++++++++++++++++++++++++++++++++++ */
+.one-half { position: relative; margin-right: 59px; float: left; margin-top: -10px; 
+width: 300px; }
+.last { width: 300px; margin-top: -10px; margin-right: 0 !important; clear:right; }</pre>
+1:  top strip - this is the background that runs across the top of your page.<br/>
+2: container - ensure that the bottom margin is the negative value of the .push css.<br/>
+3:  menu - the styling for the menu, other ribbons can be found in the extras folder.<br/>
+4: content - the styling for your main content to the right of the menu.<br/><br/>
+		
+<pre>/* 2: Services - Accordian Styling */
+
+h2.acc_trigger { margin: 0; width: 660px; font: normal 15px "CardoRegular", serif; color: #869397; 
+float: left ; padding:6px 0px 20px 0px;
+background: transparent url(style/images/dashed_line.png) bottom repeat-x ; height: 20px; 
+display: block; margin-bottom: 0px; }
+h2.acc_trigger a {background: transparent url(style/images/services2.png) no-repeat 0px 3px; 
+color: #869397; text-decoration: none; display: block;height:30px; padding: 8px 0px 0px 30px; 
+}
+h2.acc_trigger a:hover {background: transparent url(style/images/services1.png) no-repeat 0px 3px; 
+color: #5d8ba6; }
+h2.active { background-position: left bottom; }
+.acc_container { margin: 0px 0px; padding: 0; overflow: hidden; width: 660px; clear: both;
+}
+.acc_container .block { padding: 20px 0px 10px 0px; }
+.acc_container h3 { font-size:12px; padding-bottom: 5px;
+font-size:14px;font-style:italic; }
+.acc_container img { float: left; margin: 8px 15px 0px 0; padding: 3px; 
+background: #eee; border: 1px solid #ccc; }
+
+</pre>
+1:  This is the styling for the accordian slider on the services page.<br/>
+1: h2.acc_trgger - styling for the gradient bars.<br/>
+2: h2.acc_trgger a - the styling for the cog.<br/>
+3:  acc_container h3 - the styling for the title of each service description.<br/>
+<br/>
+<pre>/* 1: Sortable Gallery - (inner_tab is the styling for tabs on all pages */
+#portfolio ul li { padding: 0;margin-bottom:12px; }
+#wrapper ul.grid { width: 680px; overflow: hidden; margin: -20px 0 0px -21px; padding: 12px; }
+ul.grid:after { content: ""; display: block; height: 0; overflow: hidden; clear: both; }
+ul.grid li { width: 155px; height: 102px;border:1px solid #ccc; margin-left: 10px; float: left; 
+overflow: hidden; background: #fafafa; 
+box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+ul.grid li a { outline:0;  }
+ul.grid li img { display: block; width: 145px; height: 92px; margin: 5px 0px 0px 5px; }
+ul.gallerynav, ul.inner_tab { width: 660px;
+ margin: 0 auto 38px -17px ; height: 14px; }
+ul.gallerynav li, ul.inner_tab li{ float: left; border-right: 1px dotted #bebebe; }
+ul.gallerynav li a, ul.inner_tab li a { float: left;text-transform: uppercase; 
+font: normal 11px "Helvetica Neue", helvetica, arial, sans-serif; 
+color: #6B777C; 
+margin: 0px 3px 0px 3px; padding: 0px 15px 0px 15px; }
+ul.gallerynav li a:hover, ul.inner_tab li a:hover { text-decoration: none; color: #54bbdd; }
+ul.gallerynav li.selected-1 a { color: #5d8ba6; }
+.hidden { display: none; }</pre>
+1: This is the styling for the sortable gallery, and inner tabs.<br/><br/>
+
+<pre>/* 2: Featured Work - Slide Thumb Gallery */
+#preview_wrap {margin: -5px auto 0px auto; padding-top: 14px;
+width: 660px; height: 289px; background: url('style/images/slider.png') top left no-repeat; }
+#preview_outer { overflow: hidden; width: 620px; height: 232px;margin:0px auto; position: relative; }
+#preview_inner { text-align: left; height: 100%; position: relative; }
+#preview_inner div { float: left; width: 620px; height: 232px; position: relative; }
+#preview_inner div a { position: absolute; bottom: 0; left: 0;	 display: block;
+width: 100%; text-indent: 20px; padding: 3px 0; color: #bbb; background: url(style/images/bg_trans.png);
+text-decoration: none; font-size: 14px; }
+#preview_inner div a:hover { color: #ccc; }
+
+#thumbs { position: relative; width: 660px; text-align: center;	}
+#thumbs span {margin: -19px 0px 15px 10px; padding: 3px; width: 40px; height: 40px; cursor: pointer;
+border: 1px solid #ccc; background: #fafafa; 
+box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	-o-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+display: inline-block;
+} </pre>1:  The styling for the sliding thumb gallery.
+		
+		
+<br/><br/>
+<pre>/* 2: Google Map */
+#map {border: 1px solid #ccc; width: 215px; 
+height: 118px; margin-bottom: 20px;}	
+/* hide direction arrows */									
+.gmnoprint {display:none; }</pre>
+The styling for your google map. If you want to show the direction arrows, delete, .gmnoprint.<br/><br/>
+
+<pre>/* 6: Footer */
+#footer-wrapper, .push { height: 57px; clear: both;/* .must be the same height as .footer */}
+#footer-wrapper { height: 45px; padding-top:10px;}
+#footer { min-width: 960px; height: 45px; 
+background: transparent url(style/images/strip/check_strip.png) repeat-x 0px 0px; 
+border-top: 2px solid #999; }
+#footer-content a{ border:none; color: #aaa; }
+#footer-content a:hover{border:none; color: #ccc; }
+#footer-content { width: 960px; height: 45px; margin: 0 auto; position: relative;}
+#copyright { float: left; position: absolute; top: 18px;left: 0; }
+#copyright p { font-size: 11px; margin: 0; }
+#back-top {float: right; position: relative; top: 16px; }</pre>
+This is the styling for your footer. If you decide to change it, make sure that you add the height of the footer plus any padding to the .push height. Then add it as a minus height to the container.<br/>
+More help can be found here: http://ryanfait.com/resources/footer-stick-to-bottom-of-page/
+<br/><br/>
+<b>Font replacement</b><br/>
+This theme uses Cardo for the menu and headings.
+<br/>
+<b>Extras</b><br/>
+I have added some .psds in the psds folder, these are the logo, top strip, slider ribbon and thumb slider arrow. <br/>a) Extra images can be found in images > extras.  These include ribbons for your slider and menu.<br/>
+b) A choice of top strips can be found in images > strip. <br/>
+c) Extra backgrounds can be found in images > bg.
+<br/>
+<br/>
+<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript &amp; Php</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme uses javascript and php.</p>
+		
+		<ol>
+		
+		<li><b>Nivo Slider</b> is used for the about page image slider. You don't need to do anything with the coding, but if you do you can find everything in the folder named nivo. To add your images, size them 610px x 232px and place them into your images folder. The html has been commented for you.
+		.
+<br/>Further information can be found in the links section below.
+</li>
+			<li>Pretty Photo is used for photo gallery. "prettyPhoto is a jQuery lightbox clone. Not only does it support images, it also support for videos, flash, YouTube, iframes and ajax." (link in credits).
+</li>
+<li><b>How to edit the photo gallery</b><br/>
+&lt;a href="style/images/large.jpg" rel="prettyPhoto[pp_gal]"&gt;&lt;img src="style/images/thumb.jpg" alt="your description"  border="0" height="83" width="152" /&gt;<br/>
+1: large.jpg is your large pop-up image and small.jpg is your thumbnail. Simply add your own graphics and place them in the images > art folder.<br/>
+2: Add your description in the alt tag of the thumbnail so that it will appear when viewing the larger image. Repeat this process until you have added all ten photos.<br/>
+4: Add the class - gallast to the last thumbnail image on each row. The thumbnails are 152px x 83px in size.<br/>
+5: I have used the tag - gallery in the sortable gallery so that they don't link with your thumbnail gallery, if you decide to use both types of gallery.
+</li>
+
+
+
+
+<li><b>Contact Form</b><br/>This template uses an ajax/php form. I have explained how you can get it to forward to your email address in the html section above. All files can be found in the folder - contact.<br/>
+</li>
+
+
+
+<li> <b>TipTip Jquery</b><br/>Used for the hover tool tip effect on text links. <br/>
+To get this to work simply add a title tag to your link and:<br/>
+a) class="link" -  for a hover above tool tip <br/>
+</li>
+
+</ol>
+		
+<hr>
+<h3 id="credits"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul><li>Nivo Slider - http://nivo.dev7studios.com/
+			<li>Pretty Photo - http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</li>
+			<li>Mobily Notes - http://playground.mobily.pl/jquery/mobily-notes.html</li>
+			<li>Slide Thumbs - http://jqueryglobe.com/article/slide-thumbs</li>
+			<li>TipTip - http://code.drewwilson.com/entry/tiptip-jquery-plugin/</li>
+			<li>Google Map - http://www.birdwingfx.com/jQuery_gps/docu.html</li>
+			<li> Quovolver - http://sandbox.sebnitu.com/jquery/quovolver/</li>
+			<li> Sticky Footer - http://ryanfait.com/resources/footer-stick-to-bottom-of-page/</li>
+			<li>Social Icons - WPZoom</li>
+			<li>Headline Font - http://www.impallari.com/dancing/</li>
+			
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Jo Phillips</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

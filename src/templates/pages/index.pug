@@ -1,0 +1,51 @@
+extends ../template
+
+block variables 
+    - var title = 'Сайт-визитка'
+
+block content   
+    .container
+        .header
+            .logo
+                a(href='/')
+                    img(src="./assets/images/logo.png" width="200" height="80")
+            .social
+                ul
+                    li
+                        img#icongt(src='./assets/images/gtalk.png', width='16', height='16')
+                    li
+                        img#iconf(src='./assets/images/facebook.png', width='16', height='16')
+                    li
+                        img#icons(src='./assets/images/skype.png', width='16', height='16')
+                    li
+                        img#icongm(src='./assets/images/gmail.png', width='16', height='16')
+    .container
+        .main_info
+            h1 Приветствую Вас на моей странице!
+                ul.menu
+                    li
+                        a(href="/index.html") Главная
+                    li
+                        a(href="/resume.html") Резюме
+                    li
+                        a(href="/contacts.html") Контакты
+
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum consequat sem, nec tincidunt enim feugiat sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed egestas mattis tortor, quis auctor orci commodo id. In hac habitasse platea dictumst. Integer sed nisi nibh. Integer neque mi, pellentesque ut adipiscing ultrices, egestas vel ligula. Integer interdum ultrices turpis.
+            p Aliquam porttitor faucibus rhoncus. Aliquam erat volutpat. Vestibulum molestie fringilla mollis. Fusce eu neque arcu. Donec blandit imperdiet mollis. Etiam suscipit nisl eget libero aliquet tincidunt.
+
+            ul
+                li Nullam luctus neque sed urna mattis interdum. In hac habitasse platea dictumst.
+                li Duis enim lectus euismod non porttitor non, vulputate eget ipsum. Primis in faucibus orci luctus et ultrices posuere.
+                li Proin imperdiet arcu in consequat malesuada, hover over me to see a tool tip.
+
+            include ../common/slider.pug
+                        
+
+
+    
+    
+    
+    
+
+  
+

@@ -1,0 +1,37 @@
+
+.header { //Располагаем два основных блока шапки в линию с помощью флекса
+    background-color:  rgb(182, 208, 212);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .social { // Чтобы меню занимало всё доступное место
+    flex-grow: 1;
+  }
+  .social ul { // Вытягиваем пункты меню в линию, убираем точки, обнуляем отступы со всех сторон — они нам не нужны. Само меню должно занимать всё доступное место 
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+  }
+
+  .social li {
+    margin-right: 20px;
+  }
+  .social li:last-child {
+    margin-right: 0;
+  }
+  .social img {
+    padding: 8px 10px;
+  }
+  .logo {
+    margin-right: 30px;
+  }
+  
+
+    
